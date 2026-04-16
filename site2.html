@@ -1667,7 +1667,7 @@
             <div class="hero-gif-container">
                 <div class="hero-gif-overlay"></div>
                 <!-- REPLACE WITH YOUR GIF -->
-                <img src="image/logo1.PNG" c
+                <img src="image/logo1.PNG" 
                      alt="Futuristic Tech" 
                      class="hero-gif"
                      onerror="this.src='https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif'">
@@ -1769,7 +1769,7 @@
                 <!-- Service 4 -->
                 <div class="service-card fade-in">
                     <!-- REPLACE WITH YOUR GIF -->
-                    <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" 
+                    <img src="image/seo.gif" 
                          alt="SEO" 
                          class="service-gif"
                          onerror="this.style.display='none'">
@@ -1807,7 +1807,7 @@
                 <!-- Service 6 -->
                 <div class="service-card fade-in">
                     <!-- REPLACE WITH YOUR GIF -->
-                    <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" 
+                    <img src="image/brand.gif" 
                          alt="Branding" 
                          class="service-gif"
                          onerror="this.style.display='none'">
@@ -1939,6 +1939,48 @@
         </div>
     </section>
 
+    <!-- Review Modal -->
+    <div id="reviewModal" style="display:none; position:fixed; inset:0; z-index:5000; align-items:center; justify-content:center; padding:1rem;">
+        <div id="reviewModalOverlay" onclick="closeReviewModal()" style="position:absolute; inset:0; background:rgba(0,0,0,0.75); backdrop-filter:blur(8px);"></div>
+        <div id="reviewModalBox" style="position:relative; z-index:1; background:rgba(10,14,39,0.97); border:1px solid rgba(0,212,255,0.3); border-radius:28px; padding:3rem; max-width:560px; width:100%; box-shadow:0 30px 80px rgba(0,0,0,0.5), 0 0 40px rgba(0,212,255,0.15); animation:modalIn 0.35s cubic-bezier(0.4,0,0.2,1);">
+            <button onclick="closeReviewModal()" style="position:absolute; top:1.2rem; right:1.2rem; background:none; border:none; color:var(--text-light); font-size:1.4rem; cursor:pointer; transition:color 0.2s;" onmouseover="this.style.color='var(--secondary)'" onmouseout="this.style.color='var(--text-light)'"><i class="fas fa-times"></i></button>
+            <div id="modalTag" style="display:inline-block; background:linear-gradient(135deg,rgba(0,102,255,0.2),rgba(0,212,255,0.2)); color:var(--secondary); font-size:0.75rem; font-weight:600; padding:0.3rem 0.8rem; border-radius:20px; margin-bottom:1.2rem; text-transform:uppercase; letter-spacing:0.05em; border:1px solid rgba(0,212,255,0.3);"></div>
+            <div style="display:flex; gap:0.3rem; margin-bottom:1.2rem; color:#fbbf24; font-size:1.1rem; text-shadow:0 0 10px rgba(251,191,36,0.5);">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p id="modalText" style="color:var(--text); font-size:1.05rem; line-height:1.9; margin-bottom:2rem; font-style:italic; position:relative;"></p>
+            <div style="display:flex; align-items:center; gap:1rem; padding-top:1.5rem; border-top:1px solid var(--glass-border);">
+                <div id="modalAvatar" style="width:54px; height:54px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--secondary)); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1.1rem; flex-shrink:0; box-shadow:0 0 20px rgba(0,212,255,0.3);"></div>
+                <div>
+                    <strong id="modalName" style="display:block; color:var(--white); font-size:1.05rem;"></strong>
+                    <span id="modalRole" style="color:var(--text-light); font-size:0.9rem;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes modalIn {
+            from { opacity:0; transform:scale(0.92) translateY(20px); }
+            to   { opacity:1; transform:scale(1) translateY(0); }
+        }
+        .review-card { cursor: pointer; }
+        .review-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.8rem;
+            opacity: 0.8;
+            transition: opacity 0.2s, gap 0.2s;
+        }
+        .review-card:hover .review-read-more {
+            opacity: 1;
+            gap: 0.6rem;
+        }
+    </style>
+
     <!-- Reviews Section -->
     <section class="reviews" id="reviews">
         <div class="container">
@@ -1950,57 +1992,112 @@
             </div>
             <div class="reviews-grid">
 
-                <div class="review-card fade-in">
+                <div class="review-card fade-in" onclick="openReviewModal('Site vitrine','Abatechio a complètement refait notre site internet. En seulement quelques semaines, notre trafic a doublé et nos demandes de devis ont explosé. Un travail professionnel et une équipe très à l\'écoute !','SB','Sophie Bernard','Directrice, Atelier Couture Paris')">
                     <div class="review-tag" data-fr="Site vitrine" data-en="Showcase website">Site vitrine</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </
-
-                                        </div>
-                    <p class="review-text" data-fr="Abatechio a complètement refait notre site internet. En seulement quelques semaines, notre trafic a doublé !" data-en="Abatechio completely redesigned our website. In just a few weeks, our traffic doubled!">
-                        "Abatechio a complètement refait notre site internet..."
+                    </div>
+                    <p class="review-text">
+                        "Abatechio a complètement refait notre site internet. En seulement quelques semaines, notre trafic a doublé..."
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">SB</div>
                         <div class="review-author-info">
                             <strong>Sophie Bernard</strong>
-                            <span data-fr="Directrice, Atelier Couture Paris" data-en="Director, Atelier Couture Paris">Directrice, Atelier Couture Paris</span>
+                            <span>Directrice, Atelier Couture Paris</span>
                         </div>
                     </div>
+                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in">
+                <div class="review-card fade-in" onclick="openReviewModal('Application web','Notre ancienne plateforme était lente et peu intuitive. L\'équipe d\'Abatechio a livré une application moderne, rapide et élégante. Nos clients sont ravis et notre taux de conversion a augmenté de 40%.','KM','Karim Moussa','CEO, LogiTech Solutions')">
                     <div class="review-tag" data-fr="Application web" data-en="Web application">Application web</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text" data-fr="Notre ancienne plateforme était lente et peu intuitive. L'équipe d'Abatechio a livré une application moderne et rapide." data-en="Our old platform was slow and not user-friendly. The Abatechio team delivered a modern and fast application.">
-                        "Notre ancienne plateforme était lente..."
+                    <p class="review-text">
+                        "Notre ancienne plateforme était lente et peu intuitive. L'équipe d'Abatechio a livré une application moderne..."
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">KM</div>
                         <div class="review-author-info">
                             <strong>Karim Moussa</strong>
-                            <span data-fr="CEO, LogiTech Solutions" data-en="CEO, LogiTech Solutions">CEO, LogiTech Solutions</span>
+                            <span>CEO, LogiTech Solutions</span>
                         </div>
                     </div>
+                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in">
+                <div class="review-card fade-in" onclick="openReviewModal('E-commerce','Notre boutique en ligne était outdatée et perdait des clients. Abatechio l\'a entièrement repensée avec un design moderne et une expérience d\'achat fluide. Les ventes ont augmenté de 65% le premier mois !','LF','Laura Fontaine','Fondatrice, Maison Naturelle')">
                     <div class="review-tag" data-fr="E-commerce" data-en="E-commerce">E-commerce</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text" data-fr="Notre boutique en ligne était outdatée. Abatechio l'a entièrement repensée. Les ventes ont augmenté de 65% !" data-en="Our online store was outdated. Abatechio completely redesigned it. Sales increased by 65%!">
-                        "Notre boutique en ligne était outdatée..."
+                    <p class="review-text">
+                        "Notre boutique en ligne était outdatée et perdait des clients. Abatechio l'a entièrement repensée..."
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">LF</div>
                         <div class="review-author-info">
                             <strong>Laura Fontaine</strong>
-                            <span data-fr="Fondatrice, Maison Naturelle" data-en="Founder, Maison Naturelle">Fondatrice, Maison Naturelle</span>
+                            <span>Fondatrice, Maison Naturelle</span>
                         </div>
                     </div>
+                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                </div>
+
+                <div class="review-card fade-in" onclick="openReviewModal('SEO &amp; Visibilité','Depuis qu\'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google. L\'investissement a été rentabilisé en moins de deux mois. Je recommande sans hésiter.','TR','Thomas Renard','Gérant, Cabinet Renard &amp; Associés')">
+                    <div class="review-tag">SEO &amp; Visibilité</div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Depuis qu'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google..."
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">TR</div>
+                        <div class="review-author-info">
+                            <strong>Thomas Renard</strong>
+                            <span>Gérant, Cabinet Renard &amp; Associés</span>
+                        </div>
+                    </div>
+                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                </div>
+
+                <div class="review-card fade-in" onclick="openReviewModal('Identité visuelle','L\'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment. Notre nouveau site est élégant, rapide et reflète parfaitement nos valeurs. Merci Abatechio !','AN','Amina Ndiaye','Co-fondatrice, Studio Créatif AN')">
+                    <div class="review-tag">Identité visuelle</div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "L'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment..."
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">AN</div>
+                        <div class="review-author-info">
+                            <strong>Amina Ndiaye</strong>
+                            <span>Co-fondatrice, Studio Créatif AN</span>
+                        </div>
+                    </div>
+                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                </div>
+
+                <div class="review-card fade-in" onclick="openReviewModal('Maintenance &amp; Support','Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire. Réactifs, professionnels et toujours disponibles — c\'est rare de trouver un prestataire aussi fiable.','JL','Jean-Luc Moreau','Directeur Général, Groupe Moreau BTP')">
+                    <div class="review-tag">Maintenance &amp; Support</div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire..."
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">JL</div>
+                        <div class="review-author-info">
+                            <strong>Jean-Luc Moreau</strong>
+                            <span>Directeur Général, Groupe Moreau BTP</span>
+                        </div>
+                    </div>
+                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
             </div>
@@ -2225,6 +2322,32 @@
                 navbar.style.padding = '1rem 0';
                 navbar.style.background = 'rgba(10, 14, 39, 0.8)';
             }
+        });
+
+        // Review Modal
+        function openReviewModal(tag, text, avatar, name, role) {
+            document.getElementById('modalTag').innerHTML = tag;
+            document.getElementById('modalText').innerHTML = '&ldquo;' + text + '&rdquo;';
+            document.getElementById('modalAvatar').textContent = avatar;
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalRole').innerHTML = role;
+            const modal = document.getElementById('reviewModal');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            // Re-trigger animation
+            const box = document.getElementById('reviewModalBox');
+            box.style.animation = 'none';
+            box.offsetHeight;
+            box.style.animation = 'modalIn 0.35s cubic-bezier(0.4,0,0.2,1)';
+        }
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeReviewModal();
         });
 
         // 3D Tilt Effect for Cards
