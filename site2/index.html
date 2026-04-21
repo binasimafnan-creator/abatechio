@@ -1884,7 +1884,7 @@
                         <img src="image/afnan1.png" class="image-avatar" alt="Afnan Bin Asim">
                         <div class="team-gif-overlay">
                             <!-- REPLACE WITH YOUR GIF -->
-                            <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" 
+                            <img src="image/logo1.png" 
                                  alt="Tech" 
                                  class="team-gif"
                                  onerror="this.style.display='none'">
@@ -1910,23 +1910,23 @@
                 <!-- Mansoor -->
                 <div class="team-card fade-in">
                     <div class="team-avatar1">
-                        <img src="image/ali2.PNG" class="image-avatar1" alt="Mansoor Ali">
+                        <img src="image/ali2.PNG" class="image-avatar1" alt="Ali Mansoor">
                         <div class="team-gif-overlay">
                             <!-- REPLACE WITH YOUR GIF -->
-                            <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" 
+                            <img src="image/logo1.png"
                                  alt="Tech" 
                                  class="team-gif"
                                  onerror="this.style.display='none'">
                         </div>
                     </div>
                     <div class="team-info">
-                        <h3>Mansoor Ali</h3>
+                        <h3>Ali Mansoor</h3>
                         <p class="team-role" data-fr="Co-Fondateur" data-en="Co-Founder">Co-Fondateur</p>
-                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;" data-fr="Expert en solutions digitales, Mansoor apporte son expertise technique et sa créativité à chaque projet." data-en="Digital solutions expert, Mansoor brings his technical expertise and creativity to every project.">
+                        <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;" data-fr="Expert en solutions digitales, Ali apporte son expertise technique et sa créativité à chaque projet." data-en="Digital solutions expert, Ali brings his technical expertise and creativity to every project.">
                             Expert en solutions digitales...
                         </p>
                         <div class="team-social">
-                            <a href="https://www.linkedin.com/in/am254" target="_blank" aria-label="LinkedIn Mansoor">
+                            <a href="https://www.linkedin.com/in/am254" target="_blank" aria-label="LinkedIn Ali Mansoor">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                             <a href="mailto:mansoor@abatechio.com" aria-label="Email Mansoor">
@@ -1992,112 +1992,142 @@
             </div>
             <div class="reviews-grid">
 
-                <div class="review-card fade-in" onclick="openReviewModal('Site vitrine','Abatechio a complètement refait notre site internet. En seulement quelques semaines, notre trafic a doublé et nos demandes de devis ont explosé. Un travail professionnel et une équipe très à l\'écoute !','SB','Sophie Bernard','Directrice, Atelier Couture Paris')">
-                    <div class="review-tag" data-fr="Site vitrine" data-en="Showcase website">Site vitrine</div>
+                <!-- Review 1: Care & Peace -->
+                <div class="review-card fade-in" onclick="openReviewModal(
+                    currentLang === 'fr' ? 'Site e-commerce beauté' : 'Beauty e-commerce website',
+                    currentLang === 'fr' ? 'Abatechio a créé un site magnifique qui capture parfaitement l\'esprit slow-beauty de Care &amp; Peace. Le design épuré, les animations fluides et la boutique en ligne intuitive ont immédiatement séduit notre communauté. Nos ventes ont doublé dès le premier mois. Une équipe à l\'écoute, réactive et vraiment talentueuse.' : 'Abatechio created a beautiful website that perfectly captures the slow-beauty spirit of Care &amp; Peace. The clean design, smooth animations and intuitive online shop immediately won over our community. Our sales doubled in the first month. A team that listens, responds quickly and is truly talented.',
+                    'CP','Care &amp; Peace',
+                    currentLang === 'fr' ? 'Fondatrice, Care &amp; Peace' : 'Founder, Care &amp; Peace')">
+                    <div class="review-tag" data-fr="Site e-commerce beauté" data-en="Beauty e-commerce website">Site e-commerce beauté</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text">
-                        "Abatechio a complètement refait notre site internet. En seulement quelques semaines, notre trafic a doublé..."
+                    <p class="review-text" data-fr="&ldquo;Abatechio a créé un site magnifique qui capture parfaitement l'esprit slow-beauty de Care &amp; Peace. Nos ventes ont doublé dès le premier mois...&rdquo;" data-en="&ldquo;Abatechio created a beautiful website that perfectly captures the slow-beauty spirit of Care &amp; Peace. Our sales doubled in the first month...&rdquo;">
+                        &ldquo;Abatechio a créé un site magnifique qui capture parfaitement l'esprit slow-beauty de Care &amp; Peace. Nos ventes ont doublé dès le premier mois...&rdquo;
                     </p>
                     <div class="review-author">
-                        <div class="review-avatar">SB</div>
+                        <div class="review-avatar">CP</div>
                         <div class="review-author-info">
-                            <strong>Sophie Bernard</strong>
-                            <span>Directrice, Atelier Couture Paris</span>
+                            <strong>Care &amp; Peace</strong>
+                            <span data-fr="Fondatrice, Care &amp; Peace" data-en="Founder, Care &amp; Peace">Fondatrice, Care &amp; Peace</span>
                         </div>
                     </div>
-                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                    <span class="review-read-more" data-fr="Lire l'avis complet <i class='fas fa-arrow-right'></i>" data-en="Read full review <i class='fas fa-arrow-right'></i>">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in" onclick="openReviewModal('Application web','Notre ancienne plateforme était lente et peu intuitive. L\'équipe d\'Abatechio a livré une application moderne, rapide et élégante. Nos clients sont ravis et notre taux de conversion a augmenté de 40%.','KM','Karim Moussa','CEO, LogiTech Solutions')">
-                    <div class="review-tag" data-fr="Application web" data-en="Web application">Application web</div>
+                <!-- Review 2: Swift Logix -->
+                <div class="review-card fade-in" onclick="openReviewModal(
+                    currentLang === 'fr' ? 'Site logistique & cargo' : 'Logistics & cargo website',
+                    currentLang === 'fr' ? 'Abatechio a su traduire la complexité de nos services logistiques en un site clair, moderne et professionnel. La section tarification, les témoignages clients et la présentation de nos offres sont parfaitement structurés. Depuis le lancement, nous avons reçu bien plus de demandes de devis qualifiées. Je recommande sans réserve.' : 'Abatechio managed to translate the complexity of our logistics services into a clear, modern and professional website. The pricing section, client testimonials and service presentation are perfectly structured. Since launch, we have received far more qualified quote requests. I recommend them without hesitation.',
+                    'SL','Swift Logix',
+                    currentLang === 'fr' ? 'Directeur, Swift Logix' : 'Director, Swift Logix')">
+                    <div class="review-tag" data-fr="Site logistique & cargo" data-en="Logistics & cargo website">Site logistique &amp; cargo</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text">
-                        "Notre ancienne plateforme était lente et peu intuitive. L'équipe d'Abatechio a livré une application moderne..."
+                    <p class="review-text" data-fr="&ldquo;Abatechio a su traduire la complexité de nos services logistiques en un site clair, moderne et professionnel. Nous avons reçu bien plus de demandes qualifiées...&rdquo;" data-en="&ldquo;Abatechio managed to translate the complexity of our logistics services into a clear, modern and professional website. We received far more qualified quote requests...&rdquo;">
+                        &ldquo;Abatechio a su traduire la complexité de nos services logistiques en un site clair, moderne et professionnel. Nous avons reçu bien plus de demandes qualifiées...&rdquo;
                     </p>
                     <div class="review-author">
-                        <div class="review-avatar">KM</div>
+                        <div class="review-avatar">SL</div>
                         <div class="review-author-info">
-                            <strong>Karim Moussa</strong>
-                            <span>CEO, LogiTech Solutions</span>
+                            <strong>Swift Logix</strong>
+                            <span data-fr="Directeur, Swift Logix" data-en="Director, Swift Logix">Directeur, Swift Logix</span>
                         </div>
                     </div>
-                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                    <span class="review-read-more" data-fr="Lire l'avis complet <i class='fas fa-arrow-right'></i>" data-en="Read full review <i class='fas fa-arrow-right'></i>">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in" onclick="openReviewModal('E-commerce','Notre boutique en ligne était outdatée et perdait des clients. Abatechio l\'a entièrement repensée avec un design moderne et une expérience d\'achat fluide. Les ventes ont augmenté de 65% le premier mois !','LF','Laura Fontaine','Fondatrice, Maison Naturelle')">
-                    <div class="review-tag" data-fr="E-commerce" data-en="E-commerce">E-commerce</div>
+                <!-- Review 3: Apart Technologies -->
+                <div class="review-card fade-in" onclick="openReviewModal(
+                    currentLang === 'fr' ? 'Profil entreprise & présence digitale' : 'Company profile & digital presence',
+                    currentLang === 'fr' ? 'Nous avions besoin d\'un site qui reflète notre positionnement tech et inspire confiance auprès de nos partenaires. Abatechio a livré exactement ce que nous espérions : un profil d\'entreprise digital impactant, avec un design élégant et une navigation intuitive. Travail sérieux, équipe professionnelle.' : 'We needed a website that reflects our tech positioning and builds trust with our partners. Abatechio delivered exactly what we hoped for: an impactful digital company profile with elegant design and intuitive navigation. Serious work, professional team.',
+                    'AT','Apart Technologies',
+                    currentLang === 'fr' ? 'CEO, Apart Technologies' : 'CEO, Apart Technologies')">
+                    <div class="review-tag" data-fr="Profil entreprise & digital" data-en="Company profile & digital presence">Profil entreprise &amp; digital</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text">
-                        "Notre boutique en ligne était outdatée et perdait des clients. Abatechio l'a entièrement repensée..."
+                    <p class="review-text" data-fr="&ldquo;Abatechio a livré exactement ce que nous espérions : un profil d'entreprise digital impactant, avec un design élégant et une navigation intuitive...&rdquo;" data-en="&ldquo;Abatechio delivered exactly what we hoped for: an impactful digital company profile with elegant design and intuitive navigation...&rdquo;">
+                        &ldquo;Abatechio a livré exactement ce que nous espérions : un profil d'entreprise digital impactant, avec un design élégant et une navigation intuitive...&rdquo;
                     </p>
                     <div class="review-author">
-                        <div class="review-avatar">LF</div>
+                        <div class="review-avatar">AT</div>
                         <div class="review-author-info">
-                            <strong>Laura Fontaine</strong>
-                            <span>Fondatrice, Maison Naturelle</span>
+                            <strong>Apart Technologies</strong>
+                            <span data-fr="CEO, Apart Technologies" data-en="CEO, Apart Technologies">CEO, Apart Technologies</span>
                         </div>
                     </div>
-                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                    <span class="review-read-more" data-fr="Lire l'avis complet <i class='fas fa-arrow-right'></i>" data-en="Read full review <i class='fas fa-arrow-right'></i>">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in" onclick="openReviewModal('SEO &amp; Visibilité','Depuis qu\'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google. L\'investissement a été rentabilisé en moins de deux mois. Je recommande sans hésiter.','TR','Thomas Renard','Gérant, Cabinet Renard &amp; Associés')">
-                    <div class="review-tag">SEO &amp; Visibilité</div>
+                <!-- Review 4: Thomas Renard -->
+                <div class="review-card fade-in" onclick="openReviewModal(
+                    currentLang === 'fr' ? 'SEO &amp; Visibilité' : 'SEO &amp; Visibility',
+                    currentLang === 'fr' ? 'Depuis qu\'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google. L\'investissement a été rentabilisé en moins de deux mois. Je recommande sans hésiter.' : 'Since Abatechio rebuilt our website and optimised our SEO, we appear on the first page of Google. The investment paid off in less than two months. I highly recommend them.',
+                    'TR','Thomas Renard',
+                    currentLang === 'fr' ? 'Gérant, Cabinet Renard &amp; Associés' : 'Manager, Cabinet Renard &amp; Partners')">
+                    <div class="review-tag" data-fr="SEO &amp; Visibilité" data-en="SEO &amp; Visibility">SEO &amp; Visibilité</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text">
-                        "Depuis qu'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google..."
+                    <p class="review-text" data-fr="&ldquo;Depuis qu'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google...&rdquo;" data-en="&ldquo;Since Abatechio rebuilt our website and optimised our SEO, we appear on the first page of Google. The investment paid off in less than two months...&rdquo;">
+                        &ldquo;Depuis qu'Abatechio a refait notre site et optimisé notre référencement, nous apparaissons en première page Google...&rdquo;
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">TR</div>
                         <div class="review-author-info">
                             <strong>Thomas Renard</strong>
-                            <span>Gérant, Cabinet Renard &amp; Associés</span>
+                            <span data-fr="Gérant, Cabinet Renard &amp; Associés" data-en="Manager, Cabinet Renard &amp; Partners">Gérant, Cabinet Renard &amp; Associés</span>
                         </div>
                     </div>
-                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                    <span class="review-read-more" data-fr="Lire l'avis complet <i class='fas fa-arrow-right'></i>" data-en="Read full review <i class='fas fa-arrow-right'></i>">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in" onclick="openReviewModal('Identité visuelle','L\'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment. Notre nouveau site est élégant, rapide et reflète parfaitement nos valeurs. Merci Abatechio !','AN','Amina Ndiaye','Co-fondatrice, Studio Créatif AN')">
-                    <div class="review-tag">Identité visuelle</div>
+                <!-- Review 5: Amina Ndiaye -->
+                <div class="review-card fade-in" onclick="openReviewModal(
+                    currentLang === 'fr' ? 'Identité visuelle' : 'Visual identity',
+                    currentLang === 'fr' ? 'L\'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment. Notre nouveau site est élégant, rapide et reflète parfaitement nos valeurs. Merci Abatechio !' : 'The team truly understood our vision and created a visual identity that really represents us. Our new website is elegant, fast and perfectly reflects our values. Thank you Abatechio!',
+                    'AN','Amina Ndiaye',
+                    currentLang === 'fr' ? 'Co-fondatrice, Studio Créatif AN' : 'Co-founder, Studio Créatif AN')">
+                    <div class="review-tag" data-fr="Identité visuelle" data-en="Visual identity">Identité visuelle</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text">
-                        "L'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment..."
+                    <p class="review-text" data-fr="&ldquo;L'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment...&rdquo;" data-en="&ldquo;The team truly understood our vision and created a visual identity that really represents us...&rdquo;">
+                        &ldquo;L'équipe a su comprendre notre vision et créer une identité visuelle qui nous ressemble vraiment...&rdquo;
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">AN</div>
                         <div class="review-author-info">
                             <strong>Amina Ndiaye</strong>
-                            <span>Co-fondatrice, Studio Créatif AN</span>
+                            <span data-fr="Co-fondatrice, Studio Créatif AN" data-en="Co-founder, Studio Créatif AN">Co-fondatrice, Studio Créatif AN</span>
                         </div>
                     </div>
-                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                    <span class="review-read-more" data-fr="Lire l'avis complet <i class='fas fa-arrow-right'></i>" data-en="Read full review <i class='fas fa-arrow-right'></i>">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
-                <div class="review-card fade-in" onclick="openReviewModal('Maintenance &amp; Support','Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire. Réactifs, professionnels et toujours disponibles — c\'est rare de trouver un prestataire aussi fiable.','JL','Jean-Luc Moreau','Directeur Général, Groupe Moreau BTP')">
-                    <div class="review-tag">Maintenance &amp; Support</div>
+                <!-- Review 6: Jean-Luc Moreau -->
+                <div class="review-card fade-in" onclick="openReviewModal(
+                    currentLang === 'fr' ? 'Maintenance &amp; Support' : 'Maintenance &amp; Support',
+                    currentLang === 'fr' ? 'Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire. Réactifs, professionnels et toujours disponibles — c\'est rare de trouver un prestataire aussi fiable.' : 'Not only did they create a superb website, but their post-delivery support is exemplary. Responsive, professional and always available — it is rare to find such a reliable partner.',
+                    'JL','Jean-Luc Moreau',
+                    currentLang === 'fr' ? 'Directeur Général, Groupe Moreau BTP' : 'General Manager, Groupe Moreau BTP')">
+                    <div class="review-tag" data-fr="Maintenance &amp; Support" data-en="Maintenance &amp; Support">Maintenance &amp; Support</div>
                     <div class="review-stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="review-text">
-                        "Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire..."
+                    <p class="review-text" data-fr="&ldquo;Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire...&rdquo;" data-en="&ldquo;Not only did they create a superb website, but their post-delivery support is exemplary...&rdquo;">
+                        &ldquo;Non seulement ils ont créé un superbe site, mais leur suivi après livraison est exemplaire...&rdquo;
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">JL</div>
                         <div class="review-author-info">
                             <strong>Jean-Luc Moreau</strong>
-                            <span>Directeur Général, Groupe Moreau BTP</span>
+                            <span data-fr="Directeur Général, Groupe Moreau BTP" data-en="General Manager, Groupe Moreau BTP">Directeur Général, Groupe Moreau BTP</span>
                         </div>
                     </div>
-                    <span class="review-read-more">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
+                    <span class="review-read-more" data-fr="Lire l'avis complet <i class='fas fa-arrow-right'></i>" data-en="Read full review <i class='fas fa-arrow-right'></i>">Lire l'avis complet <i class="fas fa-arrow-right"></i></span>
                 </div>
 
             </div>
@@ -2141,22 +2171,22 @@
                     </div>
                 </div>
                 <div class="contact-form fade-in">
-                    <form onsubmit="event.preventDefault(); alert('Message envoyé ! Nous vous contacterons bientôt.');">
+                    <form id="contactForm" action="https://formspree.io/f/mlgawkqd" method="POST">
                         <div class="form-group">
                             <label data-fr="Nom complet" data-en="Full Name">Nom complet</label>
-                            <input type="text" required>
+                            <input type="text" name="name" id="contactName" required>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" required>
+                            <input type="email" name="email" id="contactEmail" required>
                         </div>
                         <div class="form-group">
                             <label data-fr="Sujet" data-en="Subject">Sujet</label>
-                            <input type="text" required>
+                            <input type="text" name="subject" id="contactSubject" required>
                         </div>
                         <div class="form-group">
                             <label data-fr="Message" data-en="Message">Message</label>
-                            <textarea required></textarea>
+                            <textarea name="message" id="contactMessage" required></textarea>
                         </div>
                         <button type="submit" class="btn-submit" data-fr="Envoyer le message →" data-en="Send Message →">
                             Envoyer le message →
@@ -2348,6 +2378,54 @@
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeReviewModal();
+        });
+
+        // Contact Form - send to binasimafnan@gmail.com
+        // Contact Form - Formspree Integration
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = currentLang === 'fr' ? 'Envoi en cours...' : 'Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const successMsg = currentLang === 'fr' 
+                        ? 'Message envoyé ! Nous vous contacterons bientôt.' 
+                        : 'Message sent! We will contact you soon.';
+                    alert(successMsg);
+                    form.reset();
+                } else {
+                    const data = await response.json();
+                    if (data.errors) {
+                        throw new Error(data.errors.map(error => error.message).join(', '));
+                    } else {
+                        throw new Error('Oops! There was a problem submitting your form');
+                    }
+                }
+            } catch (error) {
+                const errorMsg = currentLang === 'fr' 
+                    ? 'Une erreur est survenue. Veuillez réessayer.' 
+                    : 'An error occurred. Please try again.';
+                alert(errorMsg + '\n' + error.message);
+                console.error('Formspree Error:', error);
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
         });
 
         // 3D Tilt Effect for Cards
